@@ -1,0 +1,58 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Target, BrainCircuit, Database } from 'lucide-react';
+
+const AboutTab = () => {
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.4 }}
+      className="max-w-4xl"
+    >
+      <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+        Bridging Machine Learning with Business ROI.
+      </h2>
+      
+      <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-16 tracking-tight">
+        I am a Data & Product Analyst with a focus on building predictive engines and analytics pipelines. I specialize in translating raw event data into strategic business decisions.
+      </p>
+
+      <h3 className="text-xl md:text-2xl font-bold text-white mb-8 tracking-tight">
+        What I'm Doing
+      </h3>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Card 1 */}
+        <div className="bg-[#171717] rounded-3xl p-8 border border-[#2a2a2a] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-[#444] transition-colors">
+          <Target className="w-8 h-8 text-[#0d9488] mb-6" />
+          <h4 className="text-lg font-bold text-white mb-3 tracking-tight">Product Analytics</h4>
+          <p className="text-gray-500 text-sm leading-relaxed">
+            A/B testing, user behavior analysis, and feature impact evaluation.
+          </p>
+        </div>
+
+        {/* Card 2 */}
+        <div className="bg-[#171717] rounded-3xl p-8 border border-[#2a2a2a] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-[#444] transition-colors">
+          <BrainCircuit className="w-8 h-8 text-[#0d9488] mb-6" />
+          <h4 className="text-lg font-bold text-white mb-3 tracking-tight">Machine Learning</h4>
+          <p className="text-gray-500 text-sm leading-relaxed">
+            Churn prediction, classification models, and predictive algorithms.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div className="bg-[#171717] rounded-3xl p-8 border border-[#2a2a2a] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-[#444] transition-colors">
+          <Database className="w-8 h-8 text-[#0d9488] mb-6" />
+          <h4 className="text-lg font-bold text-white mb-3 tracking-tight">Data Engineering</h4>
+          <p className="text-gray-500 text-sm leading-relaxed">
+            SQL pipelines, ETL architecture, and data automation workflows.
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default AboutTab;

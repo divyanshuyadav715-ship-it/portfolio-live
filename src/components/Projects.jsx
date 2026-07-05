@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Users, Filter, Crosshair, ExternalLink } from 'lucide-react';
+import { Users, Filter, Crosshair, ExternalLink, Github } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -97,9 +97,9 @@ const Projects = () => {
               )}
               
               <div className="mt-auto">
-                {project.demoLink && (
-                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors duration-300 text-sm">
-                    <ExternalLink className="w-4 h-4" /> Launch Live Demo
+                {project.repoLink && (
+                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-[#333] text-white font-semibold rounded-full hover:bg-[#111] transition-colors duration-300 text-sm">
+                    <Github className="w-4 h-4" /> View GitHub Repo
                   </a>
                 )}
               </div>

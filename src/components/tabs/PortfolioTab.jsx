@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
@@ -9,7 +9,8 @@ const projects = [
     title: 'Predictive Customer Churn Engine',
     description: 'Engineered an end-to-end ML pipeline analyzing 50k+ users. Implemented a custom Customer Acquisition Cost (CAC) vs. Lifetime Value (LTV) routing logic.',
     tech: ['Python', 'XGBoost', 'Streamlit'],
-    link: '#'
+    demo: 'https://huggingface.co/spaces/divyanshuyadav715/churn-engine', // Assuming huggingface based on hf_fix.py in open files
+    github: 'https://github.com/divyanshuyadav715-ship-it'
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const projects = [
     title: 'E-Commerce Funnel & Drop-Off Analysis',
     description: 'Simulated and analyzed 100k+ web traffic logs to identify bottlenecks. Built an interactive dashboard to visualize conversion rates across the entire user journey.',
     tech: ['SQL', 'Tableau', 'Python'],
-    link: '#'
+    demo: '#',
+    github: 'https://github.com/divyanshuyadav715-ship-it'
   },
   {
     id: 3,
@@ -25,7 +27,8 @@ const projects = [
     title: 'MediGuide Healthcare Model',
     description: 'Developed a classification model using Support Vector Machines (SVM) to predict disease probability based on user-inputted symptoms.',
     tech: ['Scikit-Learn', 'SVM'],
-    link: '#'
+    demo: '#',
+    github: 'https://github.com/divyanshuyadav715-ship-it'
   }
 ];
 
@@ -84,12 +87,22 @@ const PortfolioTab = () => {
                 ))}
               </div>
 
-              <a 
-                href={project.link}
-                className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-[#0d9488] hover:text-white transition-colors"
-              >
-                Launch Live Demo <ExternalLink className="w-4 h-4" />
-              </a>
+              <div className="mt-auto flex items-center gap-6">
+                <a 
+                  href={project.demo}
+                  target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#0d9488] hover:text-white transition-colors"
+                >
+                  Live Demo <ExternalLink className="w-4 h-4" />
+                </a>
+                <a 
+                  href={project.github}
+                  target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                >
+                  Source Code <Github className="w-4 h-4" />
+                </a>
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>

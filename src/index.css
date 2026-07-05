@@ -6,7 +6,9 @@
 
 @layer base {
   body {
-    @apply bg-darkbg text-gray-200 font-sans antialiased;
+    @apply bg-darkbg text-gray-300 font-sans antialiased;
+    background-image: radial-gradient(circle at center, #1a1a1a 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 }
 

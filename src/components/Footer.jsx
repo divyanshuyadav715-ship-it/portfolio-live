@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Github, Linkedin, Code2, Mail, Check } from 'lucide-react';
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
@@ -14,11 +15,17 @@ const Footer = () => {
     <footer className="py-12 px-6 bg-[#000] border-t border-[#111]">
       <div className="max-w-5xl mx-auto flex flex-col items-center">
         <div className="flex space-x-8 mb-8 text-sm uppercase tracking-widest font-mono">
-          <a href="https://github.com/divyanshuyadav715-ship-it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200">GitHub</a>
-          <a href="https://www.linkedin.com/in/divyanshu-yadav-2911a52b2/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200">LinkedIn</a>
-          <a href="https://leetcode.com/u/divyanshu_1918/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200">LeetCode</a>
-          <button onClick={handleCopy} className="text-gray-500 hover:text-white transition-colors duration-200 focus:outline-none uppercase tracking-widest">
-            {copied ? 'Copied ✓' : 'Email'}
+          <a href="https://github.com/divyanshuyadav715-ship-it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 flex items-center gap-2">
+            <Github className="w-4 h-4" /> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/divyanshu-yadav-2911a52b2/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 flex items-center gap-2">
+            <Linkedin className="w-4 h-4" /> LinkedIn
+          </a>
+          <a href="https://leetcode.com/u/divyanshu_1918/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 flex items-center gap-2">
+            <Code2 className="w-4 h-4" /> LeetCode
+          </a>
+          <button onClick={handleCopy} className="text-gray-500 hover:text-white transition-colors duration-200 focus:outline-none uppercase tracking-widest flex items-center gap-2">
+            {copied ? <><Check className="w-4 h-4 text-green-500" /> Copied</> : <><Mail className="w-4 h-4" /> Email</>}
           </button>
         </div>
         <p className="text-sm font-medium text-gray-500 text-center tracking-tight">

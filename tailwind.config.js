@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        neon: '#00f0ff',
-        darkbg: '#0a0a0a',
-        darkerbg: '#050505',
-        cardbg: '#111111',
+        accent: '#ffffff',
+        darkbg: '#000000',
+        darkerbg: '#0a0a0a',
+        cardbg: '#0f0f0f',
+        bordergray: '#222222',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

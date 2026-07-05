@@ -28,54 +28,53 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6 bg-darkerbg">
+    <section id="projects" className="py-24 px-6 bg-darkerbg border-t border-bordergray">
       <div className="max-w-5xl mx-auto">
         <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-16 text-center text-white"
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-4xl font-bold mb-16 text-center text-white tracking-tight"
         >
-          The Flagship Projects
+          Flagship Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 gap-12">
+        <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ y: -5 }}
-              className="bg-cardbg rounded-2xl p-8 md:p-10 border border-gray-800 hover:border-neon transition-all duration-300 group flex flex-col h-full"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-cardbg rounded-xl p-8 md:p-10 border border-bordergray hover:border-gray-600 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-neon transition-colors duration-300">
+              <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-gray-200 transition-colors duration-300 tracking-tight">
                 {project.title}
               </h3>
-              <p className="text-sm font-mono text-gray-500 mb-6">
-                Tech: {project.tech}
+              <p className="text-xs font-mono text-gray-500 mb-6 uppercase tracking-wider">
+                {project.tech}
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
+              <p className="text-gray-400 mb-8 leading-relaxed text-lg flex-grow">
                 {project.description}
               </p>
               {project.impact && (
-                <div className="bg-neon/10 p-4 rounded-lg border-l-4 border-neon mb-6 flex-grow-0">
-                  <p className="text-neon font-medium">
-                    <span className="font-bold">Business Impact:</span> {project.impact}
+                <div className="bg-[#161616] p-4 rounded border-l-2 border-gray-500 mb-8 flex-grow-0">
+                  <p className="text-gray-300 text-sm">
+                    <span className="font-semibold text-white">Impact:</span> {project.impact}
                   </p>
                 </div>
               )}
               
               <div className="flex flex-wrap gap-4 mt-auto">
                 {project.demoLink && (
-                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-neon text-darkbg font-bold rounded hover:bg-white transition-colors duration-300">
+                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-white text-black text-sm font-medium rounded hover:bg-gray-200 transition-colors duration-200">
                     Live Demo
                   </a>
                 )}
                 {project.repoLink && (
-                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2 border border-gray-600 text-gray-300 rounded hover:border-white hover:text-white transition-colors duration-300">
+                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-transparent border border-gray-700 text-gray-300 text-sm font-medium rounded hover:border-gray-400 hover:text-white transition-colors duration-200">
                     Source Code
                   </a>
                 )}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Code2, Mail, Check } from 'lucide-react';
+import ContactEnvelope from './ContactEnvelope';
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
@@ -12,24 +13,28 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-12 px-6 bg-[#000] border-t border-[#111]">
+    <footer className="py-24 px-6 bg-[#000] border-t border-[#111]">
       <div className="max-w-5xl mx-auto flex flex-col items-center">
-        <div className="flex space-x-8 mb-8 text-sm uppercase tracking-widest font-mono">
+        
+        <ContactEnvelope />
+
+        <div className="flex space-x-8 mb-12 text-sm uppercase tracking-widest font-mono">
           <a href="https://github.com/divyanshuyadav715-ship-it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 flex items-center gap-2">
-            <Github className="w-4 h-4" /> GitHub
+            <Github className="w-6 h-6" />
           </a>
           <a href="https://www.linkedin.com/in/divyanshu-yadav-2911a52b2/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 flex items-center gap-2">
-            <Linkedin className="w-4 h-4" /> LinkedIn
-          </a>
-          <a href="https://leetcode.com/u/divyanshu_1918/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200 flex items-center gap-2">
-            <Code2 className="w-4 h-4" /> LeetCode
+            <Linkedin className="w-6 h-6" />
           </a>
           <button onClick={handleCopy} className="text-gray-500 hover:text-white transition-colors duration-200 focus:outline-none uppercase tracking-widest flex items-center gap-2">
-            {copied ? <><Check className="w-4 h-4 text-green-500" /> Copied</> : <><Mail className="w-4 h-4" /> Email</>}
+            {copied ? <Check className="w-6 h-6 text-green-500" /> : <Mail className="w-6 h-6" />}
           </button>
         </div>
-        <p className="text-sm font-medium text-gray-500 text-center tracking-tight">
-          Available for roles starting in 2027. <span className="text-gray-300">Let's build.</span>
+        
+        <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter mb-4 text-center">
+          Available for roles starting in 2027.
+        </h2>
+        <p className="text-xl md:text-2xl font-medium text-gray-500 text-center tracking-tight">
+          Let's talk data.
         </p>
       </div>
     </footer>

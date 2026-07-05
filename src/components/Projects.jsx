@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Database, LineChart, Activity, ExternalLink, Github } from 'lucide-react';
 
 const projects = [
   {
@@ -8,7 +9,8 @@ const projects = [
     description: "Engineered an end-to-end ML pipeline analyzing 50k+ users. Built a custom profitability matrix simulating LTV vs. CAC to target retention discounts.",
     impact: "Projected to reduce wasted retention spend by 30% and save ₹45L in annualized revenue.",
     demoLink: "https://huggingface.co/spaces/divyanshujaat/churn-intervention-engine",
-    repoLink: "https://github.com/divyanshuyadav715-ship-it/predictive-churn-engine"
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/predictive-churn-engine",
+    icon: <LineChart className="w-6 h-6 text-gray-400 mb-4" />
   },
   {
     title: "E-Commerce Conversion Funnel Analysis",
@@ -16,13 +18,15 @@ const projects = [
     description: "Simulated and analyzed 100k+ web sessions to identify checkout friction points.",
     impact: "Identified a critical mobile UI drop-off.",
     demoLink: "https://ecommerce-conversion-funnel-xy4ajysrncyatj3rqyxave.streamlit.app/",
-    repoLink: "https://github.com/divyanshuyadav715-ship-it/ecommerce-conversion-funnel"
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/ecommerce-conversion-funnel",
+    icon: <Database className="w-6 h-6 text-gray-400 mb-4" />
   },
   {
     title: "MediGuide Predictive Healthcare",
     tech: "SVM, Scikit-Learn",
     description: "Developed a classification model for symptom-based disease prediction.",
-    impact: ""
+    impact: "",
+    icon: <Activity className="w-6 h-6 text-gray-400 mb-4" />
   }
 ];
 
@@ -52,6 +56,7 @@ const Projects = () => {
               style={{ boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.05)' }}
             >
               <div className="flex flex-col flex-grow">
+                {project.icon}
                 <h3 className="text-xl font-semibold text-gray-100 mb-2 tracking-tight">
                   {project.title}
                 </h3>
@@ -70,15 +75,15 @@ const Projects = () => {
                 )}
               </div>
               
-              <div className="flex flex-wrap gap-3 mt-auto pt-6 border-t border-[#111]">
+              <div className="flex flex-wrap gap-4 mt-auto pt-6 border-t border-[#111]">
                 {project.demoLink && (
-                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200 flex items-center gap-1">
-                    Live Demo ↗
+                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200 flex items-center gap-1.5">
+                    <ExternalLink className="w-4 h-4" /> Live Demo
                   </a>
                 )}
                 {project.repoLink && (
-                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200 flex items-center gap-1">
-                    GitHub ↗
+                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm font-medium hover:text-white transition-colors duration-200 flex items-center gap-1.5">
+                    <Github className="w-4 h-4" /> GitHub
                   </a>
                 )}
               </div>

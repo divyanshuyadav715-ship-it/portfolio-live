@@ -16,6 +16,7 @@ const Footer = () => {
         <div className="flex space-x-8 mb-8 text-sm uppercase tracking-widest font-mono">
           <a href="https://github.com/divyanshuyadav715-ship-it" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200">GitHub</a>
           <a href="https://www.linkedin.com/in/divyanshu-yadav-2911a52b2/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200">LinkedIn</a>
+          <a href="https://leetcode.com/u/divyanshu_1918/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors duration-200">LeetCode</a>
           <button onClick={handleCopy} className="text-gray-500 hover:text-white transition-colors duration-200 focus:outline-none uppercase tracking-widest">
             {copied ? 'Copied ✓' : 'Email'}
           </button>

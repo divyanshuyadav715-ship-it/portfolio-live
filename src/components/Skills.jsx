@@ -8,7 +8,7 @@ const skillCategories = [
   },
   {
     title: "Engineering",
-    skills: ["Python (Pandas/NumPy)", "Advanced SQL", "C++", "Data Structures & Algorithms"]
+    skills: ["Python (Pandas/NumPy)", "Advanced SQL", "C++", "Data Structures"]
   },
   {
     title: "ML & BI",
@@ -18,36 +18,37 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-6 bg-darkbg border-t border-bordergray">
+    <section id="skills" className="py-24 px-6 bg-[#000]">
       <div className="max-w-5xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold mb-16 text-center text-white tracking-tight"
+          className="text-2xl font-semibold mb-12 text-white tracking-tight"
         >
-          Skills & Architecture
+          Capabilities
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {skillCategories.map((category, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-cardbg rounded-xl p-8 border border-bordergray hover:border-gray-600 transition-all duration-300 shadow-sm hover:shadow-lg"
+              className="bg-[#050505] rounded-3xl p-8 border border-[#111] hover:border-[#333] transition-all duration-300"
+              style={{ boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.05)' }}
             >
-              <h3 className="text-xl font-semibold text-white mb-6 border-b border-bordergray pb-4 tracking-tight">
+              <h3 className="text-sm font-mono text-gray-500 mb-6 uppercase tracking-widest border-b border-[#111] pb-4">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-col gap-3">
                 {category.skills.map((skill, sIndex) => (
                   <span 
                     key={sIndex}
-                    className="px-3 py-1.5 bg-darkerbg text-gray-400 text-xs font-medium rounded border border-bordergray hover:border-gray-400 hover:text-white transition-colors duration-200 uppercase tracking-wider"
+                    className="text-gray-300 text-sm tracking-tight"
                   >
                     {skill}
                   </span>

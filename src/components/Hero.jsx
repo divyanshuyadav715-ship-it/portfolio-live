@@ -49,14 +49,6 @@ const Hero = () => {
           >
             View Flagship Projects
           </a>
-          <a 
-            href="https://divyanshujaat.github.io/predictive-churn-engine/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3.5 bg-transparent border border-[#333] text-white text-sm font-semibold rounded-full hover:bg-[#111] transition-colors duration-300 w-full sm:w-auto"
-          >
-            Live Streamlit Dashboard ↗
-          </a>
         </motion.div>
       </div>
     </section>

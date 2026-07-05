@@ -3,13 +3,17 @@ import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
 
 const Sidebar = () => {
   return (
-    <aside className="w-full lg:w-[320px] lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-[#171717] border-b lg:border-b-0 lg:border-r border-[#2a2a2a] flex flex-col p-8 md:p-12 z-50">
+    <aside className="w-full lg:w-[320px] lg:h-screen lg:fixed lg:top-0 lg:left-0 bg-[#171717] border-b lg:border-b-0 lg:border-r border-[#2a2a2a] flex flex-col p-8 md:p-12 z-50 shadow-2xl relative">
       
       {/* Profile Section */}
       <div className="flex flex-col items-center lg:items-start mb-10">
-        <div className="w-32 h-32 rounded-3xl bg-[#2a2a2a] mb-6 overflow-hidden flex items-center justify-center border border-[#333]">
-          {/* Placeholder for Profile Picture */}
-          <span className="text-4xl text-gray-500 font-bold">DY</span>
+        <div className="w-32 h-32 rounded-3xl mb-6 border-2 border-[#2a2a2a] overflow-hidden shadow-2xl group relative bg-[#121212]">
+          <img 
+            src="https://github.com/divyanshuyadav715-ship-it.png" 
+            alt="Divyanshu Yadav" 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-[#0d9488]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
         <h1 className="text-3xl font-bold text-white tracking-tight mb-2 text-center lg:text-left">
           Divyanshu Yadav

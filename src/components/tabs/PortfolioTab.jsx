@@ -1,0 +1,101 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
+
+const projects = [
+  {
+    id: 1,
+    category: 'ML Models',
+    title: 'Predictive Customer Churn Engine',
+    description: 'Engineered an end-to-end ML pipeline analyzing 50k+ users. Implemented a custom Customer Acquisition Cost (CAC) vs. Lifetime Value (LTV) routing logic.',
+    tech: ['Python', 'XGBoost', 'Streamlit'],
+    link: '#'
+  },
+  {
+    id: 2,
+    category: 'Web Analytics',
+    title: 'E-Commerce Funnel & Drop-Off Analysis',
+    description: 'Simulated and analyzed 100k+ web traffic logs to identify bottlenecks. Built an interactive dashboard to visualize conversion rates across the entire user journey.',
+    tech: ['SQL', 'Tableau', 'Python'],
+    link: '#'
+  },
+  {
+    id: 3,
+    category: 'ML Models',
+    title: 'MediGuide Healthcare Model',
+    description: 'Developed a classification model using Support Vector Machines (SVM) to predict disease probability based on user-inputted symptoms.',
+    tech: ['Scikit-Learn', 'SVM'],
+    link: '#'
+  }
+];
+
+const PortfolioTab = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+  
+  const filters = ['All', 'Applications', 'Web Analytics', 'ML Models'];
+  
+  const filteredProjects = projects.filter(project => 
+    activeFilter === 'All' ? true : project.category === activeFilter
+  );
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ duration: 0.4 }}
+    >
+      <div className="flex flex-wrap gap-4 mb-12">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+              activeFilter === filter 
+                ? 'bg-[#0d9488] text-white shadow-[0_0_15px_rgba(13,148,136,0.3)]' 
+                : 'bg-[#171717] text-gray-400 hover:text-white border border-[#2a2a2a]'
+            }`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
+      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <AnimatePresence>
+          {filteredProjects.map((project) => (
+            <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              key={project.id}
+              className="bg-[#171717] rounded-3xl p-8 border border-[#2a2a2a] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] hover:border-[#444] transition-colors flex flex-col group"
+            >
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">{project.title}</h3>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed flex-grow">{project.description}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-8">
+                {project.tech.map((t) => (
+                  <span key={t} className="px-3 py-1 bg-[#222] text-gray-400 text-xs font-mono rounded">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <a 
+                href={project.link}
+                className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-[#0d9488] hover:text-white transition-colors"
+              >
+                Launch Live Demo <ExternalLink className="w-4 h-4" />
+              </a>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default PortfolioTab;

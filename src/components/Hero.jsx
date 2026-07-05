@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section id="hero" className="min-h-screen flex flex-col items-center justify-center pt-20 pb-12 px-6 bg-[#000]">
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center">
         <motion.h1 
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
@@ -18,25 +18,30 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl md:text-2xl font-medium mb-10 text-gray-500 tracking-tight"
+          className="text-xl md:text-2xl font-medium mb-8 text-gray-500 tracking-tight"
         >
           Data & Product Analyst
         </motion.h2>
 
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-400 mb-14 max-w-2xl mx-auto leading-relaxed tracking-tight"
+          className="mb-14 max-w-3xl mx-auto"
         >
-          I build predictive engines and analytics pipelines.
-        </motion.p>
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed tracking-tight mb-4">
+            I engineer high-performance ML pipelines, architect scalable data models, and tackle complex algorithms.
+          </p>
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed tracking-tight">
+            Bridging the gap between raw data and business ROI with clean, production-ready code. Always iterating, always optimizing.
+          </p>
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a 
             href="#projects" 
@@ -48,9 +53,17 @@ const Hero = () => {
             href="https://divyanshujaat.github.io/predictive-churn-engine/" 
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-transparent text-white text-sm font-medium rounded-full hover:bg-white/5 transition-colors duration-200 w-full sm:w-auto flex items-center justify-center gap-2"
+            className="px-6 py-3 bg-transparent border border-[#333] text-white text-sm font-medium rounded-full hover:bg-[#111] transition-colors duration-200 w-full sm:w-auto flex items-center justify-center gap-2"
           >
             Live Dashboard ↗
+          </a>
+          <a 
+            href="https://leetcode.com/u/divyanshu_1918/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-transparent text-gray-400 hover:text-white text-sm font-medium rounded-full hover:bg-white/5 transition-colors duration-200 w-full sm:w-auto flex items-center justify-center gap-2"
+          >
+            LeetCode ↗
           </a>
         </motion.div>
       </div>

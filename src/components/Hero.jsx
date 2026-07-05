@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Scene from './Scene';
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center pt-20 pb-12 px-6 bg-[#000]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-12 px-6 bg-[#000] overflow-hidden">
+      <Scene />
+      <div className="relative z-10 max-w-4xl mx-auto text-center pointer-events-none">
         <motion.h1 
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
@@ -41,7 +43,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 pointer-events-auto"
         >
           <a 
             href="#projects" 
@@ -53,7 +55,7 @@ const Hero = () => {
             href="https://divyanshujaat.github.io/predictive-churn-engine/" 
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-transparent border border-[#333] text-white text-sm font-medium rounded-full hover:bg-[#111] transition-colors duration-200 w-full sm:w-auto flex items-center justify-center gap-2"
+            className="px-6 py-3 bg-[#0a0a0a] border border-[#333] text-white text-sm font-medium rounded-full hover:bg-[#111] transition-colors duration-200 w-full sm:w-auto flex items-center justify-center gap-2"
           >
             Live Dashboard ↗
           </a>

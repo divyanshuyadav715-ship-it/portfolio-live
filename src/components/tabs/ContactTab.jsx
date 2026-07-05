@@ -1,8 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const ContactTab = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [locationText, setLocationText] = useState('India (Remote Active)');
+  const [mapSrc, setMapSrc] = useState('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14349122.95156476!2d68.32410974026367!3d22.44976735160934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus');
+
+  useEffect(() => {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          setLocationText(`Lat: ${lat.toFixed(2)}, Lng: ${lng.toFixed(2)} (Live)`);
+          setMapSrc(`https://www.google.com/maps?q=${lat},${lng}&hl=en&z=14&output=embed`);
+        },
+        (error) => {
+          console.warn('Geolocation blocked or failed:', error);
+          // Defaults to India if user denies location tracking
+        }
+      );
+    }
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -94,11 +113,11 @@ const ContactTab = () => {
             <h3 className="text-sm font-bold text-white tracking-tight">Current Location</h3>
             <p className="text-[#0d9488] font-mono text-xs uppercase tracking-widest flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#0d9488] animate-pulse"></span>
-              India (Remote Active)
+              {locationText}
             </p>
           </div>
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14349122.95156476!2d68.32410974026367!3d22.44976735160934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            src={mapSrc} 
             width="100%" 
             height="100%" 
             style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(105%) grayscale(80%)' }} 

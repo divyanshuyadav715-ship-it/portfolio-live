@@ -9,7 +9,7 @@ const Sidebar = () => {
       <div className="flex flex-col items-center lg:items-start mb-10">
         <div className="w-32 h-32 rounded-3xl mb-6 border-2 border-[#2a2a2a] overflow-hidden shadow-2xl group relative bg-[#121212]">
           <img 
-            src="https://github.com/divyanshuyadav715-ship-it.png" 
+            src="/profile.jpg" 
             alt="Divyanshu Yadav" 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />

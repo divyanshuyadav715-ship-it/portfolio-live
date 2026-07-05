@@ -2,15 +2,15 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-6 bg-darkbg border-t border-gray-800">
+    <footer className="py-12 px-6 bg-darkbg border-t border-bordergray">
       <div className="max-w-5xl mx-auto flex flex-col items-center">
         <div className="flex space-x-6 mb-8">
-          <a href="#" className="text-gray-400 hover:text-neon transition-colors duration-300">GitHub</a>
-          <a href="#" className="text-gray-400 hover:text-neon transition-colors duration-300">LinkedIn</a>
-          <a href="#" className="text-gray-400 hover:text-neon transition-colors duration-300">Email</a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">GitHub</a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">LinkedIn</a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">Email</a>
         </div>
-        <p className="text-2xl md:text-3xl font-bold text-white text-center tracking-tight">
-          Available for roles starting in 2027. <span className="text-neon">Let's talk data.</span>
+        <p className="text-xl md:text-2xl font-semibold text-gray-300 text-center tracking-tight">
+          Available for roles starting in 2027. <span className="text-white">Let's talk data.</span>
         </p>
       </div>
     </footer>

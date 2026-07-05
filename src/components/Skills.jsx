@@ -1,17 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Target, Code2, Cpu } from 'lucide-react';
 
 const skillCategories = [
   {
     title: "Core",
+    icon: <Target className="w-5 h-5 text-gray-500 mb-4" />,
     skills: ["Product Analytics", "A/B Testing", "Root Cause Analysis"]
   },
   {
     title: "Engineering",
+    icon: <Code2 className="w-5 h-5 text-gray-500 mb-4" />,
     skills: ["Python (Pandas/NumPy)", "Advanced SQL", "C++", "Data Structures"]
   },
   {
     title: "ML & BI",
+    icon: <Cpu className="w-5 h-5 text-gray-500 mb-4" />,
     skills: ["XGBoost", "SVM", "Tableau", "Streamlit"]
   }
 ];
@@ -41,6 +45,7 @@ const Skills = () => {
               className="bg-[#050505] rounded-3xl p-8 border border-[#111] hover:border-[#333] transition-all duration-300"
               style={{ boxShadow: 'inset 0 1px 0 0 rgba(255,255,255,0.05)' }}
             >
+              {category.icon}
               <h3 className="text-sm font-mono text-gray-500 mb-6 uppercase tracking-widest border-b border-[#111] pb-4">
                 {category.title}
               </h3>

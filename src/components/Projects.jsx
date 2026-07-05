@@ -6,13 +6,17 @@ const projects = [
     title: "Predictive Customer Churn & Intervention Engine",
     tech: "Python, XGBoost, SQLite, Streamlit",
     description: "Engineered an end-to-end ML pipeline analyzing 50k+ users. Built a custom profitability matrix simulating LTV vs. CAC to target retention discounts.",
-    impact: "Projected to reduce wasted retention spend by 30% and save ₹45L in annualized revenue."
+    impact: "Projected to reduce wasted retention spend by 30% and save ₹45L in annualized revenue.",
+    demoLink: "https://huggingface.co/spaces/divyanshujaat/churn-intervention-engine",
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/predictive-churn-engine"
   },
   {
     title: "E-Commerce Conversion Funnel Analysis",
     tech: "Advanced SQL (CTEs, Window Functions), Python, BI Dashboards",
     description: "Simulated and analyzed 100k+ web sessions to identify checkout friction points.",
-    impact: "Identified a critical mobile UI drop-off, recommending a UX redesign projected to recapture ₹25 Lakhs in monthly revenue."
+    impact: "Identified a critical mobile UI drop-off, recommending a UX redesign projected to recapture ₹25 Lakhs in monthly revenue.",
+    demoLink: "https://ecommerce-conversion-funnel-xy4ajysrncyatj3rqyxave.streamlit.app/",
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/ecommerce-conversion-funnel"
   },
   {
     title: "MediGuide Predictive Healthcare",
@@ -57,12 +61,25 @@ const Projects = () => {
                 {project.description}
               </p>
               {project.impact && (
-                <div className="bg-neon/10 p-4 rounded-lg border-l-4 border-neon mt-auto">
+                <div className="bg-neon/10 p-4 rounded-lg border-l-4 border-neon mb-6 flex-grow-0">
                   <p className="text-neon font-medium">
                     <span className="font-bold">Business Impact:</span> {project.impact}
                   </p>
                 </div>
               )}
+              
+              <div className="flex flex-wrap gap-4 mt-auto">
+                {project.demoLink && (
+                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-neon text-darkbg font-bold rounded hover:bg-white transition-colors duration-300">
+                    Live Demo
+                  </a>
+                )}
+                {project.repoLink && (
+                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2 border border-gray-600 text-gray-300 rounded hover:border-white hover:text-white transition-colors duration-300">
+                    Source Code
+                  </a>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>

@@ -19,7 +19,7 @@ const Sidebar = () => {
           Divyanshu Yadav
         </h1>
         <div className="bg-[#2a2a2a] text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium tracking-wide">
-          Data & Product Analyst
+          Machine Learning Engineer
         </div>
       </div>
 

@@ -1,11 +1,28 @@
 import React, { useRef, useEffect } from 'react';
-import { Users, Filter, Crosshair, ExternalLink, Github } from 'lucide-react';
+import { Users, Filter, Crosshair, ExternalLink, Github, Activity, Database } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
+  {
+    title: "Adaptive Trading Protocol (ATP)",
+    tech: ["Python", "PyTorch", "FastAPI", "Streamlit"],
+    description: "Autonomous quantitative trading & drift observability ecosystem. End-to-end MLOps trading platform training an RL agent on synthetically generated financial data.",
+    impact: "Demonstrates training of a Reinforcement Learning agent on synthetically generated financial data and monitoring its performance in production using Drift Detection and XAI.",
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/SynthMarket",
+    demoLink: "https://locustfilepy-6trvjqjzvgxc7caucx6xbe.streamlit.app/#agent-performance-live-p-l",
+    icon: <Activity className="w-10 h-10 text-white mb-6" />
+  },
+  {
+    title: "InferX - Scalable AI Serving Engine",
+    tech: ["Java", "Spring Boot", "Python", "PyTorch", "Redis"],
+    description: "A high-performance, distributed deep learning inference gateway bridging Systems Engineering and Machine Learning. Decouples the client-facing API from the heavy GPU workers using an event-driven Redis architecture.",
+    impact: "Introduces Dynamic Batching at the worker level, grouping individual incoming requests into a single tensor block for highly efficient parallel GPU execution.",
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/inferx",
+    icon: <Database className="w-10 h-10 text-white mb-6" />
+  },
   {
     title: "Predictive Customer Churn & Intervention Engine",
     tech: ["Python", "XGBoost", "SQLite", "Streamlit"],

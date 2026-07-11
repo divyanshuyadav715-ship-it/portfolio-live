@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Users, Filter, Crosshair, ExternalLink, Github, Activity, Database } from 'lucide-react';
+import { Users, Filter, Crosshair, ExternalLink, Github, Activity, Database, Camera } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -45,6 +45,14 @@ const projects = [
     description: "Developed a classification model using SVM to predict disease probability based on user-inputted symptoms.",
     impact: "",
     icon: <Crosshair className="w-10 h-10 text-white mb-6" />
+  },
+  {
+    title: "Smart Attendance System (CV)",
+    tech: ["Python", "OpenCV", "Pandas", "LBPH"],
+    description: "Engineered an end-to-end Computer Vision application that uses Haar Cascades for face detection and the LBPH algorithm for real-time facial recognition.",
+    impact: "Automates attendance roll calls with real-time recognition, instantly syncing logs to persistent daily CSV storage to prevent data loss.",
+    repoLink: "https://github.com/divyanshuyadav715-ship-it/Smart_attendance_CV",
+    icon: <Camera className="w-10 h-10 text-white mb-6" />
   }
 ];
 

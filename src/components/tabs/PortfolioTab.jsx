@@ -47,6 +47,15 @@ const projects = [
     tech: ['Scikit-Learn', 'SVM'],
     demo: '#',
     github: 'https://github.com/divyanshuyadav715-ship-it'
+  },
+  {
+    id: 6,
+    category: 'ML Models',
+    title: 'Smart Attendance System (CV)',
+    description: 'An end-to-end Computer Vision application utilizing Haar Cascades for face detection and LBPH for real-time facial recognition to automate attendance logging.',
+    tech: ['Python', 'OpenCV', 'Pandas'],
+    demo: '#',
+    github: 'https://github.com/divyanshuyadav715-ship-it/Smart_attendance_CV'
   }
 ];
 

@@ -105,21 +105,32 @@ const PortfolioTab = () => {
                 ))}
               </div>
 
-              <div className="mt-auto flex items-center gap-6">
-                <a 
-                  href={project.demo}
-                  target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[#0d9488] hover:text-white transition-colors"
-                >
-                  Live Demo <ExternalLink className="w-4 h-4" />
-                </a>
-                <a 
-                  href={project.github}
-                  target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
-                >
-                  Source Code <Github className="w-4 h-4" />
-                </a>
+              <div className="mt-auto flex flex-col gap-3">
+                <div className="flex items-center gap-6">
+                  {project.demo && project.demo !== '#' && (
+                    <a 
+                      href={project.demo}
+                      target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-[#0d9488] hover:text-white transition-colors"
+                    >
+                      Live Demo <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
+                  {project.github && project.github !== '#' && (
+                    <a 
+                      href={project.github}
+                      target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                    >
+                      Source Code <Github className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
+                {project.demo && project.demo !== '#' && (
+                  <span className="text-xs text-gray-500/80 font-medium italic">
+                    *Free tier apps may take 1-2 mins to wake up from sleep
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}

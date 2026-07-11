@@ -113,11 +113,21 @@ const Projects = () => {
                 </div>
               )}
               
-              <div className="mt-auto">
-                {project.repoLink && (
-                  <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-[#333] text-white font-semibold rounded-full hover:bg-[#111] transition-colors duration-300 text-sm">
-                    <Github className="w-4 h-4" /> View GitHub Repo
-                  </a>
+              <div className="mt-auto flex flex-wrap gap-4 items-center">
+                {project.demoLink && project.demoLink !== '#' && (
+                  <div className="flex flex-col gap-2">
+                    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0d9488] border border-[#0d9488] text-white font-semibold rounded-full hover:bg-transparent hover:text-[#0d9488] transition-colors duration-300 text-sm">
+                      <ExternalLink className="w-4 h-4" /> View Live Demo
+                    </a>
+                    <span className="text-xs text-gray-500 font-medium italic pl-4">*May take 1-2 mins to wake up</span>
+                  </div>
+                )}
+                {project.repoLink && project.repoLink !== '#' && (
+                  <div className="flex flex-col gap-2">
+                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-[#333] text-white font-semibold rounded-full hover:bg-[#111] transition-colors duration-300 text-sm">
+                      <Github className="w-4 h-4" /> View GitHub Repo
+                    </a>
+                  </div>
                 )}
               </div>
             </div>

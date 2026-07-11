@@ -25,7 +25,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl font-medium mb-10 text-gray-400 tracking-tight"
         >
-          Data & Product Analyst | Bridging Machine Learning with Business ROI
+          Machine Learning Engineer & Data Analyst | Bridging AI with Scalable Infrastructure & ROI
         </motion.h2>
 
         <motion.p 
@@ -34,7 +34,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed tracking-tight"
         >
-          I build predictive engines and analytics pipelines that don't just output data—they drive strategic decisions and protect the bottom line.
+          I architect scalable AI systems, quantitative trading protocols, and predictive engines that don't just output data—they drive robust infrastructure and strategic decisions.
         </motion.p>
 
         <motion.div 

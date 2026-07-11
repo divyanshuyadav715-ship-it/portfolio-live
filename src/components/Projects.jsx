@@ -47,10 +47,10 @@ const projects = [
     icon: <Crosshair className="w-10 h-10 text-white mb-6" />
   },
   {
-    title: "Smart Attendance System (CV)",
-    tech: ["Python", "OpenCV", "Pandas", "LBPH"],
-    description: "Engineered an end-to-end Computer Vision application that uses Haar Cascades for face detection and the LBPH algorithm for real-time facial recognition.",
-    impact: "Automates attendance roll calls with real-time recognition, instantly syncing logs to persistent daily CSV storage to prevent data loss.",
+    title: "AegisAttendance: AI-Powered Biometric Analytics Engine",
+    tech: ["DeepFace", "ArcFace", "Supabase", "Docker", "Streamlit"],
+    description: "An enterprise-scale facial recognition system designed for real-time attendance management, featuring 2D liveness detection heuristics and automated analytical reporting.",
+    impact: "Shifted from flat files to a cloud-native relational database (Supabase), enabling multi-user analytics. Upgraded to Deep Learning-based embeddings (DeepFace) for 99.8%+ accuracy.",
     repoLink: "https://github.com/divyanshuyadav715-ship-it/Smart_attendance_CV",
     icon: <Camera className="w-10 h-10 text-white mb-6" />
   }

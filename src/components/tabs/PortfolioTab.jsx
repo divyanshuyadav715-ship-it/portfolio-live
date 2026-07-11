@@ -51,9 +51,9 @@ const projects = [
   {
     id: 6,
     category: 'ML Models',
-    title: 'Smart Attendance System (CV)',
-    description: 'An end-to-end Computer Vision application utilizing Haar Cascades for face detection and LBPH for real-time facial recognition to automate attendance logging.',
-    tech: ['Python', 'OpenCV', 'Pandas'],
+    title: 'AegisAttendance: AI Biometric Engine',
+    description: 'An enterprise-scale facial recognition system designed for real-time attendance management, featuring liveness detection and automated analytical reporting.',
+    tech: ['DeepFace', 'Supabase', 'Docker'],
     demo: '#',
     github: 'https://github.com/divyanshuyadav715-ship-it/Smart_attendance_CV'
   }

@@ -6,6 +6,24 @@ const projects = [
   {
     id: 1,
     category: 'ML Models',
+    title: 'Adaptive Trading Protocol (ATP)',
+    description: 'Architected an end-to-end MLOps trading platform using Time-Series GANs for synthetic data generation and a Reinforcement Learning (PPO) agent for algorithmic trading.',
+    tech: ['Python', 'PyTorch', 'FastAPI', 'Streamlit'],
+    demo: 'https://locustfilepy-6trvjqjzvgxc7caucx6xbe.streamlit.app/#agent-performance-live-p-l',
+    github: 'https://github.com/divyanshuyadav715-ship-it/SynthMarket'
+  },
+  {
+    id: 2,
+    category: 'Applications',
+    title: 'InferX - Scalable AI Serving Engine',
+    description: 'Engineered a high-performance, distributed deep learning inference gateway to bridge Systems Engineering and ML. Decoupled client-facing APIs from heavy GPU workers via an event-driven Redis architecture.',
+    tech: ['Java', 'Spring Boot', 'Python', 'Redis'],
+    demo: '#',
+    github: 'https://github.com/divyanshuyadav715-ship-it/inferx'
+  },
+  {
+    id: 3,
+    category: 'ML Models',
     title: 'Predictive Customer Churn Engine',
     description: 'Engineered an end-to-end ML pipeline analyzing 50k+ users. Implemented a custom Customer Acquisition Cost (CAC) vs. Lifetime Value (LTV) routing logic.',
     tech: ['Python', 'XGBoost', 'Streamlit'],
@@ -13,7 +31,7 @@ const projects = [
     github: 'https://github.com/divyanshuyadav715-ship-it/predictive-churn-engine'
   },
   {
-    id: 2,
+    id: 4,
     category: 'Web Analytics',
     title: 'E-Commerce Funnel & Drop-Off Analysis',
     description: 'Simulated and analyzed 100k+ web traffic logs to identify bottlenecks. Built an interactive dashboard to visualize conversion rates across the entire user journey.',
@@ -22,7 +40,7 @@ const projects = [
     github: 'https://github.com/divyanshuyadav715-ship-it/ecommerce-conversion-funnel'
   },
   {
-    id: 3,
+    id: 5,
     category: 'ML Models',
     title: 'MediGuide Healthcare Model',
     description: 'Developed a classification model using Support Vector Machines (SVM) to predict disease probability based on user-inputted symptoms.',

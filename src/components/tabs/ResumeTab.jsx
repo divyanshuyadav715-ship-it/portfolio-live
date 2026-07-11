@@ -43,6 +43,26 @@ const ResumeTab = () => {
         {/* Timeline Item 1 */}
         <div className="mb-12 relative">
           <div className="absolute w-4 h-4 bg-[#2a2a2a] rounded-full -left-[41px] top-1"></div>
+          <h3 className="text-xl font-bold text-white mb-2 tracking-tight">Adaptive Trading Protocol (ATP)</h3>
+          <h4 className="text-[#0d9488] font-medium mb-4">Machine Learning Engineer</h4>
+          <p className="text-gray-400 tracking-tight leading-relaxed">
+            Architected an end-to-end MLOps trading platform using Time-Series GANs for synthetic data generation and a Reinforcement Learning (PPO) agent for algorithmic trading. Implemented real-time drift detection (KL-Divergence) and Explainable AI (XAI) to securely monitor production performance.
+          </p>
+        </div>
+
+        {/* Timeline Item 2 */}
+        <div className="mb-12 relative">
+          <div className="absolute w-4 h-4 bg-[#2a2a2a] rounded-full -left-[41px] top-1"></div>
+          <h3 className="text-xl font-bold text-white mb-2 tracking-tight">InferX - Scalable AI Serving Engine</h3>
+          <h4 className="text-[#0d9488] font-medium mb-4">Systems Engineer</h4>
+          <p className="text-gray-400 tracking-tight leading-relaxed">
+            Engineered a high-performance, distributed deep learning inference gateway to bridge Systems Engineering and ML. Decoupled client-facing APIs from heavy GPU workers via an event-driven Redis architecture.
+          </p>
+        </div>
+
+        {/* Timeline Item 3 */}
+        <div className="mb-12 relative">
+          <div className="absolute w-4 h-4 bg-[#2a2a2a] rounded-full -left-[41px] top-1"></div>
           <h3 className="text-xl font-bold text-white mb-2 tracking-tight">Predictive Customer Churn Engine</h3>
           <h4 className="text-[#0d9488] font-medium mb-4">Machine Learning Engineer</h4>
           <p className="text-gray-400 tracking-tight leading-relaxed">
@@ -50,7 +70,7 @@ const ResumeTab = () => {
           </p>
         </div>
 
-        {/* Timeline Item 2 */}
+        {/* Timeline Item 4 */}
         <div className="mb-12 relative">
           <div className="absolute w-4 h-4 bg-[#2a2a2a] rounded-full -left-[41px] top-1"></div>
           <h3 className="text-xl font-bold text-white mb-2 tracking-tight">E-Commerce Funnel & Drop-Off Analysis</h3>
@@ -60,7 +80,7 @@ const ResumeTab = () => {
           </p>
         </div>
 
-        {/* Timeline Item 3 */}
+        {/* Timeline Item 5 */}
         <div className="relative">
           <div className="absolute w-4 h-4 bg-[#2a2a2a] rounded-full -left-[41px] top-1"></div>
           <h3 className="text-xl font-bold text-white mb-2 tracking-tight">MediGuide Healthcare Model</h3>

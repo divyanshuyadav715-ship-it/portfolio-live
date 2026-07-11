@@ -9,8 +9,8 @@ const projects = [
   {
     title: "Adaptive Trading Protocol (ATP)",
     tech: ["Python", "PyTorch", "FastAPI", "Streamlit"],
-    description: "Autonomous quantitative trading & drift observability ecosystem. End-to-end MLOps trading platform training an RL agent on synthetically generated financial data.",
-    impact: "Demonstrates training of a Reinforcement Learning agent on synthetically generated financial data and monitoring its performance in production using Drift Detection and XAI.",
+    description: "Architected an end-to-end MLOps trading platform using Time-Series GANs for synthetic data generation and a Reinforcement Learning (PPO) agent for algorithmic trading.",
+    impact: "Implemented real-time drift detection (KL-Divergence) and Explainable AI (XAI) to securely monitor production performance and trigger an automated 'Kill Switch' during market anomalies.",
     repoLink: "https://github.com/divyanshuyadav715-ship-it/SynthMarket",
     demoLink: "https://locustfilepy-6trvjqjzvgxc7caucx6xbe.streamlit.app/#agent-performance-live-p-l",
     icon: <Activity className="w-10 h-10 text-white mb-6" />
@@ -18,8 +18,8 @@ const projects = [
   {
     title: "InferX - Scalable AI Serving Engine",
     tech: ["Java", "Spring Boot", "Python", "PyTorch", "Redis"],
-    description: "A high-performance, distributed deep learning inference gateway bridging Systems Engineering and Machine Learning. Decouples the client-facing API from the heavy GPU workers using an event-driven Redis architecture.",
-    impact: "Introduces Dynamic Batching at the worker level, grouping individual incoming requests into a single tensor block for highly efficient parallel GPU execution.",
+    description: "Engineered a high-performance, distributed deep learning inference gateway to bridge Systems Engineering and ML. Decoupled client-facing APIs from heavy GPU workers via an event-driven Redis architecture.",
+    impact: "Eliminated client timeouts and skyrocketed inference throughput by efficiently routing high-volume HTTP traffic to scalable Python workers using Redis streams and Dynamic Batching.",
     repoLink: "https://github.com/divyanshuyadav715-ship-it/inferx",
     icon: <Database className="w-10 h-10 text-white mb-6" />
   },
